@@ -1,0 +1,27 @@
+#!/bin/sh
+
+. /spike/bin/kernels.inc
+packages="net-wireless/broadcom-sta"
+non_tagged_packages=""
+
+# build for latest kernel
+KERNEL_DIR="/usr/src/linux-${running_kernel}" emerge $packages ${non_tagged_packages} || exit 1
+echo -5 | etc-update
+eit add ${packages} ${non_tagged_packages} || exit 1
+
+for kernel in $kernels; do
+        if [ "${kernel}" = "${running_kernel}" ]; then
+                continue
+        fi
+        rm -rf /usr/portage/packages/*
+        KERNEL_DIR="/usr/src/linux-${kernel}" emerge -B ${packages} || { echo "ouch unable to build" && exit 1; }
+        built_pkgs=$(find /usr/portage/packages -name "*.tbz2" | xargs echo)
+        [[ -z "${built_pkgs}" ]] && echo "ouch no kernel pkgs" && exit 2
+        eit inject ${built_pkgs} || { echo "ouch unable to inject" && exit 3; }
+        echo
+        eit search "#${kernel}" -q | sort | uniq
+        echo
+done
+
+echo "Now you should remove old packages"
+echo "PLEASE also see /etc/entropy/packages/packages.server.dep_rewrite"
