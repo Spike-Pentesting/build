@@ -12,13 +12,13 @@ net-fs/openafs
 >=x11-drivers/nvidia-drivers-275.21
 
 # GCC 4.6, welcome!
-sys-devel/gcc:4.6::sabayon-distro
+sys-devel/gcc:4.6::spike
 
 # Needed for the >=games-action/teeworlds-0.6.1
 >=dev-util/bam-0.4.0
 
 # Our version is fine
-media-video/nvidia-settings::sabayon-distro
+media-video/nvidia-settings::spike
 
 # Anaconda uses it (perhaps bundle it?)
 <sys-libs/libsepol-9999
@@ -248,7 +248,7 @@ media-gfx/yafaray:0
 >=x11-themes/gnome-themes-standard-3.12.0
 >=x11-wm/mutter-3.12.1
 # required by app-misc/tracker-0.16.4[iso]
-# required by gnome-base/nautilus-3.12.0::sabayon-distro
+# required by gnome-base/nautilus-3.12.0::spike
 # required by app-text/evince-3.12.1[nautilus]
 # required by gnome-extra/gnome-documents-3.12.0
 # required by gnome-documents (argument)
@@ -274,7 +274,7 @@ media-gfx/yafaray:0
 #  * >=upower-0.99
 =app-misc/tracker-1.0*
 
-# required by gnome-base/nautilus-3.12.0::sabayon-distro[tracker]
+# required by gnome-base/nautilus-3.12.0::spike[tracker]
 # required by nautilus (argument)
 # /usr/portage/profiles/package.mask:
 # Gilles Dartiguelongue <eva@gentoo.org> (27 Apr 2014)

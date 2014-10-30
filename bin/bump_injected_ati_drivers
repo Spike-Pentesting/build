@@ -1,9 +1,9 @@
 #!/bin/sh
 
-kernels="2.6.36-sabayon 2.6.37-sabayon 2.6.38-sabayon"
+kernels="2.6.36-spike 2.6.37-spike 2.6.38-spike"
 packages="=x11-drivers/ati-drivers-11.2-r1"
 non_injected_packages="~x11-drivers/ati-userspace-11.2"
-ETP_REPO="${ETP_REPO:-sabayon-limbo}"
+ETP_REPO="${ETP_REPO:-spike-limbo}"
 
 rm -rf /usr/portage/packages/x11-drivers/*
 emerge -B ${non_injected_packages} || exit 1

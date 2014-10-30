@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. /sabayon/bin/kernels.inc
+. /spike/bin/kernels.inc
 packages="app-emulation/virtualbox-guest-additions app-emulation/virtualbox-modules x11-drivers/xf86-video-virtualbox"
 non_tagged_packages="virtualbox-bin"
 

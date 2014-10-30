@@ -3,11 +3,11 @@
 # script that makes it easier to bump split packages
 # (and perhaps other fun stuff)
 
-. /sabayon/bin/buildrc || exit 2
+. /spike/bin/buildrc || exit 2
 
 list="git [sub]version [tra]nsmission"
 cmd="emerge -av"
-default_overlay="sabayon-distro"
+default_overlay="spike"
 overlay=
 
 if [ "$1" = "--repo" ]; then

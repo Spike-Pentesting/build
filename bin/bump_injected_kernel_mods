@@ -3,7 +3,7 @@
 kernel="${1}"
 if [ -z "${kernel}" ]; then
 	echo "$0 <kernel>"
-	echo "example: $0 2.6.35-sabayon"
+	echo "example: $0 2.6.35-spike"
 	exit 1
 fi
 
@@ -28,7 +28,7 @@ net-wireless/rtl8192se
 ~x11-drivers/nvidia-drivers-256.53
 x11-drivers/xf86-video-virtualbox"
 
-ETP_REPO="${ETP_REPO:-sabayonlinux.org}"
+ETP_REPO="${ETP_REPO:-spikelinux.org}"
 
 # build for latest kernel
 rm -rf /usr/portage/packages/*

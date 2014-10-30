@@ -1,2 +1,2 @@
 #!/bin/sh
-ssh entropy@pkg.sabayon.org /sabayon/bin/update-sabayon-weekly-notice
+ssh entropy@pkg.spike.org /spike/bin/update-spike-weekly-notice

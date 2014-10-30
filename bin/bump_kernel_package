@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. /sabayon/bin/kernels.inc
+. /spike/bin/kernels.inc
 
 if [ "${#}" -lt 1 ]; then
 	echo "${0} <package> <package> ..." >&2 /dev/null

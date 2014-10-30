@@ -1,10 +1,10 @@
 #!/bin/sh
 
-. /sabayon/bin/kernels.inc
+. /spike/bin/kernels.inc
 
 packages="=x11-drivers/nvidia-drivers-173* =x11-drivers/nvidia-drivers-304*"
 non_kernel_packages="=x11-drivers/nvidia-userspace-173* =x11-drivers/nvidia-userspace-304*"
-ETP_REPO="${ETP_REPO:-sabayon-limbo}"
+ETP_REPO="${ETP_REPO:-spike-limbo}"
 
 rm -rf /usr/portage/packages/x11-drivers/*
 emerge -B ${non_kernel_packages} || exit 1

@@ -10,7 +10,7 @@ REGEX=${6}
 
 show_help() {
     echo "${0} <repo path> <pull remote> <push remote> <branch> <push tag prefix> v<track regex>" >&2
-    echo "Example: ${0} ~/repos/kernel stable origin 3.12 sabayon- 3\.12\.[0-9999]" >&2
+    echo "Example: ${0} ~/repos/kernel stable origin 3.12 spike- 3\.12\.[0-9999]" >&2
 }
 
 if [ ! -d "${REPO_PATH}" ]; then
@@ -114,14 +114,14 @@ start() {
             rollback
             return 1;
         }
-        bash sabayon/bump-configs.sh || {
+        bash spike/bump-configs.sh || {
             rollback
             return 1;
         }
 
-        local changed=$(git ls-files -m -d -o --exclude-standard sabayon/config)
+        local changed=$(git ls-files -m -d -o --exclude-standard spike/config)
         if [ -n "${changed}" ]; then
-            git commit --quiet sabayon/config -m "sabayon: bump configs" || {
+            git commit --quiet spike/config -m "spike: bump configs" || {
                 rollback
                 return 1;
             }
@@ -137,7 +137,7 @@ start() {
         }
 
         tracked_tag="${PREFIX}${tag/v}"
-        bash sabayon/tag-version.sh "${tracked_tag}" || {
+        bash spike/tag-version.sh "${tracked_tag}" || {
             rollback
             return 1;
         }

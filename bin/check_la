@@ -16,7 +16,7 @@ import entropy.tools
 la_compiled_patterns = dict((x, re.compile(x)) for x in la_patterns)
 print la_compiled_patterns
 
-repo_id = os.getenv("ETP_REPO", "sabayonlinux.org")
+repo_id = os.getenv("ETP_REPO", "spikelinux.org")
 srv = Server()
 dbconn = srv.open_repository(repo_id)
 pkg_ids = dbconn.listAllIdpackages(order_by="atom")

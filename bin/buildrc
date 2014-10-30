@@ -40,7 +40,7 @@ _exec_locked() {
 				echo >&2
 				echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >&2
 				echo "The LVM lock of the Backup Script is being held for 2 minutes" >&2
-				echo "This should not happen. Please contact lxnay@sabayon.org and" >&2
+				echo "This should not happen. Please contact lxnay@spike.org and" >&2
 				echo "stop any activity NOW. However, if you're in an emergency" >&2
 				echo "Just rm ${lvm_snapshot_lock_file} and continue." >&2
 				echo "Please note that this will cause inconsistent backups." >&2

@@ -193,7 +193,7 @@ games-util/steam-client-meta::gamerlay
 # be unpopular.
 app-admin/glance
 
-# 2014-03-26 Fabui Erculiani: we now use systemd from sabayon-distro
+# 2014-03-26 Fabui Erculiani: we now use systemd from spike
 sys-apps/systemd::systemd-love
 sys-apps/systemd::gentoo
 
