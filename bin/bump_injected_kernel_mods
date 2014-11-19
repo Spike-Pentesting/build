@@ -13,6 +13,7 @@ app-emulation/virtualbox-modules
 app-emulation/vmware-modules
 app-laptop/omnibook
 app-laptop/tp_smapi
+sys-power/bbswitch
 media-video/em8300-modules
 net-wireless/acx
 net-wireless/broadcom-sta
