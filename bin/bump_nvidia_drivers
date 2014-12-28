@@ -1,7 +1,7 @@
 #!/bin/sh
 
 . /spike/bin/kernels.inc
-packages="x11-drivers/nvidia-drivers::sabayon-distro sys-power/bbswitch"
+packages="x11-drivers/nvidia-drivers::spike sys-power/bbswitch x11-drivers/nvidia-userspace"
 
 # build for latest kernel
 FEATURES="-ccache" KERNEL_DIR="/usr/src/linux-${running_kernel}" emerge $packages 
