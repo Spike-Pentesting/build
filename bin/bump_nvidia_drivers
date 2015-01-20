@@ -1,11 +1,10 @@
 #!/bin/sh
 
 . /spike/bin/kernels.inc
-packages="x11-drivers/nvidia-drivers::spike sys-power/bbswitch x11-drivers/nvidia-userspace"
+packages="x11-drivers/nvidia-drivers::spike sys-power/bbswitch x11-drivers/nvidia-userspace::sabayon-distro"
 
 # build for latest kernel
-FEATURES="-ccache" KERNEL_DIR="/usr/src/linux-${running_kernel}" emerge $packages 
-x11-drivers/nvidia-userspace::sabayon-distro media-video/nvidia-settings::sabayon-distro
+FEATURES="-ccache" KERNEL_DIR="/usr/src/linux-${running_kernel}" emerge $packages x11-drivers/nvidia-userspace::sabayon-distro media-video/nvidia-settings::sabayon-distro
 echo -5 | etc-update
 eit commit
 
