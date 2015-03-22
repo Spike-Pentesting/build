@@ -1,5 +1,7 @@
 #!/bin/sh
 
 built_pkgs=$(find /usr/portage/packages -name "*.tbz2" | xargs echo)
+echo "Injecting: ${built_pkgs}"
 [[ -z "${built_pkgs}" ]] && echo "ouch no kernel pkgs" && exit 2
 eit inject ${built_pkgs} || { echo "ouch unable to inject" && exit 3; }
+echo "Injected: ${built_pkgs}"
