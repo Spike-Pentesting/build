@@ -282,3 +282,6 @@ app-text/poppler::gentoo
 
 # 2014-10-12 Sławomir Nizio: sci-visualization/mayavi (4.3.0) does not build with it
 =sci-libs/vtk-6.0.0*
+
+# 2016-03-11 Ettore Di Giacinto: Keep openssl from our overlay
+dev-libs/openssl::gentoo
